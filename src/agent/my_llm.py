@@ -8,7 +8,7 @@ from langchain_deepseek import ChatDeepSeek
 from langchain_openai import ChatOpenAI
 
 from agent.my_custom_llm import BailianCustomChatModel
-from env_utils import DEEPSEEK_API_KEY, DEEPSEEK_BASE_URL, OPENAI_API_KEY, OPENAI_BASE_URL, ALIBABA_BASE_URL, ALIBABA_API_KEY
+from agent.env_utils import DEEPSEEK_API_KEY, DEEPSEEK_BASE_URL, OPENAI_API_KEY, OPENAI_BASE_URL, ALIBABA_BASE_URL, ALIBABA_API_KEY
 
 deepseek_llm = ChatDeepSeek(    # langchain-deepseek
     api_key=DEEPSEEK_API_KEY,
