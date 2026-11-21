@@ -3,3 +3,5 @@
 agent.egg-info/
 
 src/agent/__pycache__/
+
+src/agent/*/__pycache__/

@@ -3,12 +3,15 @@ Model Class 方式初始化模型
 创建各类LLM模型
 """
 from langchain.chat_models import init_chat_model
+from langchain_community.chat_models import ChatZhipuAI
 from langchain_core.rate_limiters import InMemoryRateLimiter
 from langchain_deepseek import ChatDeepSeek
 from langchain_openai import ChatOpenAI
+from zhipuai import ZhipuAI
 
 from agent.my_custom_llm import BailianCustomChatModel
-from agent.env_utils import DEEPSEEK_API_KEY, DEEPSEEK_BASE_URL, OPENAI_API_KEY, OPENAI_BASE_URL, ALIBABA_BASE_URL, ALIBABA_API_KEY
+from agent.env_utils import DEEPSEEK_API_KEY, DEEPSEEK_BASE_URL, OPENAI_API_KEY, OPENAI_BASE_URL, ALIBABA_BASE_URL, \
+    ALIBABA_API_KEY, ZHIPU_API_KEY
 
 deepseek_llm = ChatDeepSeek(    # langchain-deepseek
     api_key=DEEPSEEK_API_KEY,
@@ -88,9 +91,11 @@ rate_limiter_model_llm = init_chat_model(
 #     api_key=ZHIPUAI_API_KEY,
 #     model="glm-4",
 # )
-#
+
 # zhipu_llm2 = ChatOpenAI(
 #     api_key=ZHIPUAI_API_KEY,
 #     base_url=ZHIPUAI_BASE_URL,
 #     model="glm-4",
 # )
+
+zhipuai_client = ZhipuAI(api_key=ZHIPU_API_KEY)
