@@ -24,3 +24,9 @@ from agent.env_utils import DEEPSEEK_API_KEY, DEEPSEEK_BASE_URL, OPENAI_API_KEY,
 不要写成：
 from env_utils import DEEPSEEK_API_KEY, DEEPSEEK_BASE_URL, OPENAI_API_KEY, OPENAI_BASE_URL, ALIBABA_BASE_URL, ALIBABA_API_KEY
 其他包导入同理。
+
+# text-to-sql 案例
+pip install sqlalchemy pymysql loguru
+
+启动：
+langgraph dev --allow-blocking
